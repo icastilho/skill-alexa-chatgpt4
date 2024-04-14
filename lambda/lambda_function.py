@@ -20,7 +20,7 @@ client = OpenAI(api_key=openai_api_key)
 
 MODEL = "gpt-4-1106-preview"
 
-messages = [{"role": "system", "content": "Você é uma assistente muito útil. Por favor, responda de forma clara e concisa em Português do Brasil."}]
+messages = [{"role": "system", "content": "Você é um assistente residencial ao estilo de J.A.R.V.I.S., do Homem de Ferro. Sua tarefa é responder a perguntas diárias sobre diversos assuntos e ajudar os moradores da casa com suas atividades cotidianas. Com um tom humorístico e amigável, você deve fornecer respostas claras e concisas em português do Brasil (PT-BR). Seja prestativo e engenhoso, sempre pronto para facilitar o dia a dia dos moradores com a sua inteligência e bom humor."}]
 
 class LaunchRequestHandler(AbstractRequestHandler):
     def can_handle(self, handler_input):
@@ -30,7 +30,7 @@ class LaunchRequestHandler(AbstractRequestHandler):
 
     def handle(self, handler_input):
         # type: (HandlerInput) -> Response
-        speak_output = "Bem vindo ao Chat 'Gepetê Quatro' da 'Open ei ai'! Qual a sua pergunta?"
+        speak_output = "Qual a sua pergunta?"
 
         return (
             handler_input.response_builder
